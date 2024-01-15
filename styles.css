@@ -1,3 +1,30 @@
-html {
-    background-image: url;
+html, body {
+    /* background-image: url("./background.jpg"); */
+    background-color: burlywood;
+}
+
+#teamGallery{
+    display: flex;
+    justify-content: space-around;
+}
+
+.teamPlaceHolders {
+    width: 15em;
+    height: 23em;
+    border: 5px solid black;
+    border-radius: 2.5em;
+}
+
+#recruitButton {
+   padding: 1.25em;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+#buttonArea {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    text-decoration: underline;
 }

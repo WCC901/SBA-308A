@@ -1,3 +1,4 @@
+export {fetchARandomClass, fetchARandomRace, rollStats};
 async function fetchARandomClass() {
     try {
         const response = await fetch("https://api.open5e.com/classes/?cr=3");
@@ -5,15 +6,19 @@ async function fetchARandomClass() {
         const classList = await classData.results;
         return classList[Math.round(Math.random() * ((classList.length) - (-0.49)) + (-0.49))];
     } catch (error) {
-        alert("Error in the response from API: " + error)
+        alert("Error in response from the API: " + error)
     }
 }
 
 async function fetchARandomRace() {
-    const response = await fetch("https://api.open5e.com/races/?cr=3");
-    const raceData = await response.json();
-    const raceList = await raceData.results;
-    console.log(raceList[Math.round(Math.random() * ((raceList.length) - (-0.49)) + (-0.49))]);
+    try {
+        const response = await fetch("https://api.open5e.com/races/?cr=3");
+        const raceData = await response.json();
+        const raceList = await raceData.results;
+        console.log(raceList[Math.round(Math.random() * ((raceList.length) - (-0.49)) + (-0.49))]);
+    } catch (error) {
+        alert("Error in response from the API: " + error)
+    }
 }
 
 function rollStats() {

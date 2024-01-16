@@ -24,6 +24,11 @@ html, body {
     text-align: center;
 }
 
+#recruitButton {
+    border-radius: 1.5em;
+    border: 1px solid black
+}
+
 h2 {
     text-align: center;
     text-decoration: underline;
@@ -32,4 +37,9 @@ h2 {
 #characters {
     display: flex;
     justify-content: space-around;
+}
+
+/* For the pictures at the bottom when they're made */
+#characterPics:hover {
+ cursor: pointer;
 }

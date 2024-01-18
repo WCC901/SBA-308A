@@ -15,7 +15,7 @@ async function fetchARandomRace() {
         const response = await fetch("https://api.open5e.com/races/?cr=3");
         const raceData = await response.json();
         const raceList = await raceData.results;
-        console.log(raceList[Math.round(Math.random() * ((raceList.length) - (-0.49)) + (-0.49))]);
+        return raceList[Math.round(Math.random() * ((raceList.length) - (-0.49)) + (-0.49))];
     } catch (error) {
         alert("Error in response from the API: " + error)
     }
